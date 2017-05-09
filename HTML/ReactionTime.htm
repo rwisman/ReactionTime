@@ -1,0 +1,210 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="Author" content="Raymond F. Wisman">
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<link REL="stylesheet" href="basic.css" type="text/css">
+<link rel="icon" 
+      type="image/ico" 
+      href="favicon.ico"/>
+<title>ReactionTime</title>
+</head>
+
+<body text="#000000" bgcolor="#FFFFFF" link="#0000FF" vlink="#551A8B" 
+alink="#FF0000">
+
+	<table border="0" cellpadding="10" cellspacing="0">
+		<tr>
+			<td><font size="5"><b>Mobile Science </b></font>&nbsp;<a href="javascript:(function(){l=location.href;if(l.indexOf('translate')>=0){l=decodeURIComponent(l.replace(/^.*[&?](trurl|url|u)=/,'').replace(/[&?].*$/,''))};s=document.selection?document.selection.createRange().text:window.getSelection?window.getSelection().toString():document.getSelection?document.getSelection():'';lw=(s=='')?'http://translate.google.com/translate?u='+encodeURIComponent(l)+'&sl=auto&tl=es&anno=0':'http://translate.google.com/translate_t?text='+s+'&sl=auto&tl=es';wt=window.open(lw);if(window.focus){wt.focus()};})()" style="text-decoration: none"><font size="2">Espanol</font></a><font size="5"><img border="0" src="icon.png" align="left" hspace="0" style="border: 8px solid #FFFFFF; background-color: #FFFFFF" width="72" height="72"><b><br>
+			ReactionTime</b></font>
+	by Ray Wisman and Kyle Forinash<br>Indiana University SE. 
+
+				<blockquote>
+					<blockquote>
+						<h2><font size="4"><br>
+						Google Play</font><span style="font-size: 16pt"> 
+						- </span>
+						<a href="https://play.google.com/store/apps/details?id=edu.ius.rwisman.reactiontime">
+						<font size="4">ReactionTime</font></a></h2>
+					</blockquote>
+					<h2><span style="font-size: 16pt">Description</span></h2>
+					<blockquote>
+						<p><i>ReactionTime</i> measures reaction time from a 
+						prompt (sound, visual and touch) until the user reacts by 
+						producing a sound (a dog clicker works well).</p>
+						<p>ReactionTime uses sound for a more accurate and 
+						flexible measure than responding to an screen button 
+						tap. Sharply tapping the screen works also if a sound is 
+						produced.</p>
+						<p>Using sound allows accurate time measurement based on 
+						audio recording at precise intervals (e.g. 44100 Hz). 
+						Using buttons to measure reaction time suffers from the 
+						variable latency of response to a button tap, inherently 
+						less predictable or accurate. </p>
+						<p>Using sound for the reaction is adaptable for science 
+						education experiments that measure the user reaction 
+						time at the:</p>
+						<ul>
+							<li>hand,</li>
+							<li>foot,</li>
+							<li>wherever a reaction sound can be produced.</li>
+						</ul>
+						<p>&nbsp;</p>
+						<blockquote>
+							<table border="0" cellpadding="10" cellspacing="0">
+								<tr>
+									<td><img border="0" src="start.png" width="295" height="519"></td>
+									<td><img border="0" src="rightfoot.png" width="294" height="524"></td>
+									<td><img border="0" src="stop.png" width="294" height="524"></td>
+									<td><img border="0" src="list.png" width="294" height="524"></td>
+								</tr>
+								<tr>
+									<td>Press <i>Start</i> to begin a trial.</td>
+									<td>Prompt for right foot reaction time.</td>
+									<td>Stop reaction time trial with sharp sound.</td>
+									<td>List of reaction time results, left 
+									foot, etc.</td>
+								</tr>
+							</table>
+						</blockquote>
+						<p>The three signals initiating a single reaction time 
+						test and when the user should respond with a sharp sound 
+						are: </p>
+						<ol>
+							<li>visual - the screen blinks red, </li>
+							<li>audio - the application clicks, </li>
+							<li>touch - the phone vibrates (default is off).</li>
+						</ol>
+						<p>The three signals allow random testing reaction times 
+						dependent upon three different senses. Any combination 
+						of hands or feet can be tested.</p>
+					</blockquote>
+					<p><b>Use</b></p>
+					<blockquote>
+						<ol>
+							<li>For the user reaction sound, a dog clicker works well 
+						(a Google search yields many do-it-yourself videos) but 
+						just about any sharp, quick sound can be used.</li>
+							<li>A response time trial is the duration from an 
+							audio, visual or touch prompt until a response sound 
+							is detected; if not detected in 2 seconds no 
+							reaction time is assumed.</li>
+							<li>The reaction time trial can occur once or be repeated, 
+						results are displayed 
+					when measured and can be saved to the device.</li>
+							<li>The device should be placed on material that dampens 
+						echoes such as clothe or a carpet.</li>
+							<li>Headphones should not be used.</li>
+							<li>Locate the sound source for the user reaction close 
+						to the device to mitigate the effects of ambient noise.</li>
+							<li>Sound detection level can be adjusted via the menu if 
+						needed to accurately detect reaction time. If &quot;Missing&quot; increase the level, reduce the level 
+						if in noisy environment.</li>
+							<li>Reaction times are known to differ when responding to the sound, 
+							touch or visual prompt.</li>
+							<li>Response time trials have a default random delay 
+							of 1-4 seconds waiting for the trial and 2 seconds 
+							to respond. The delay can be changed to 1-10 
+							seconds.</li>
+							<li>The current limit of successfully timed trials 
+							is 1000.</li>
+						</ol>
+					</blockquote>
+					<p><b>Implementation</b></p>
+					<blockquote>
+						<p>Reaction time is determined by recording audio and 
+						measuring the time between the start of an app generated 
+						click sound until the user reacts by producing a sound. 
+						The following amplitude graph of audio recorded during a 
+						reaction time test details the time when the app 
+						generated click occurred (the first amplitude spike) and 
+						the user produced sound (the second amplitude spike). 
+						The time between the start of the two spikes is the 
+						measured reaction time, about 0.1815s.&nbsp; </p>
+						<p align="center">
+						<img border="0" src="sound.png" width="832" height="454"></p>
+						<p>Sound is used for timing as the audio recorder 
+						sampling rate is generally much more accurate than 
+						possible using software timers that are notoriously 
+						unreliable due to unpredictable 
+						processor demands. The app attempts to use the highest 
+						available audio sampling rate. If a 44100Hz sample rate is 
+						used, one sample is recorded every 0.0000226s (1 
+						sample/44100 samples per second), a key factor for the 
+						accuracy limit of measurement between the first and second 
+						sound spike. In practice, reaction time accuracy is 
+						considerably less due in part to the method of spike 
+						detection. The basic detection method is to scan the 
+						samples for an amplitude above or below a specific value 
+						(e.g. 20000 or -20000) which as the above graph 
+						illustrates generally occurs several samples after a 
+						sound causes the amplitude to begin increasing 
+						significantly; though the number of these pre-spike 
+						samples is limited, the number is uncertain so the time 
+						when the spike is determined has some uncertainty. The 
+						sound graphed above had 32 pre-spike samples lasting 32 
+						samples/44100Hz = 0.00072s; so expected accuracy is no 
+						better than at the millisecond level. </p>
+						<p>&nbsp;</p>
+					</blockquote>
+					<p><b>Accuracy</b></p>
+					<blockquote>
+						<p>Reported reaction time to a visual stimulus is about 0.19s and 
+						an audio stimulus about 0.16s (<a href="https://www.reference.com/health/average-human-reaction-time-64cbed7617fa4bd2">https://www.reference.com/health/average-human-reaction-time-64cbed7617fa4bd2</a>) 
+						which compares favorably with the app results. Comparing 
+						the app timing between the start of the two spikes with 
+						that of two other recording software (Audacity for Mac 
+						and AudioTime for Android) gave identical results at the 
+						millisecond level. While generally delay is less when no 
+						other apps are running, due to audio and display latency 
+						inheritent in the Android system, the audio cue may 
+						occur slightly before or after the visual cue.</p>
+						<blockquote>
+							<blockquote>
+								<p align="center">&nbsp;</p>
+							</blockquote>
+						</blockquote>
+					</blockquote>
+					
+			</blockquote></td>
+		</tr>
+	</table>
+
+	<a>
+<p><b>Legalese</b></p>
+	<blockquote>
+		<p>The program is free software: you can use
+		it under the terms of the GNU General Public License as published by
+		the Free Software Foundation, either version 3 of the License, or
+		(at your option) any later version. No promises are made or responsibly
+		for damage.</p>
+	</blockquote>
+	<p><b>Contacts</b></p>
+	<blockquote>
+		<p>R. Wisman (<script language="javascript">
+document.write('<a href="mailto:rwisman');
+document.write('@');
+document.write('ius.edu">rwisman');
+document.write('@');
+document.write('ius.edu</a>');
+      </script>
+) for 
+		software questions.</p>
+		<p>K. Forinash (<script language="javascript">
+document.write('<a href="mailto:kforinas');
+document.write('@');
+document.write('ius.edu">kforinas');
+document.write('@');
+document.write('ius.edu</a>');
+      </script>
+) 
+		for physics or educational use questions.</p>
+	</blockquote>
+
+</body>
+
+</html>

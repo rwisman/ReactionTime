@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/repetitions"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/setrepetitions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/numberrepetitions"
+            android:layout_centerHorizontal="true"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <NumberPicker
+            android:id="@+id/repetitionspicker"
+            android:background="#000000"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="75dp"
+            android:layout_marginBottom="75dp"
+            android:layout_centerHorizontal="true"
+            android:scaleX="1.5"
+            android:scaleY="1.5"
+            android:layout_below="@id/setrepetitions"/>
+</RelativeLayout>

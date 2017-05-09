@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="/d/RESEARCH/Mobile Science/ReactionTime/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/d/RESEARCH/Mobile Science/ReactionTime/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_7a75ecf27b2c9d24711cfead3ad03aa4f36e8351/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/d/RESEARCH/Mobile Science/ReactionTime/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="944b02718a684a574389bf7aa883f761bfac946d">
+        <dex dex="/d/RESEARCH/Mobile Science/ReactionTime/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_a08181c723c51d90c5d15a5b321e24e4e4d6c7c2/classes.dex" />
+    </item>
+
+</items>
